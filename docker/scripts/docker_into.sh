@@ -1,5 +1,5 @@
 #!/bin/bash
 
-CONTAINER_NAME="test"
+CONTAINER_NAME="publisher"
 
 docker exec -it ${CONTAINER_NAME} /bin/bash

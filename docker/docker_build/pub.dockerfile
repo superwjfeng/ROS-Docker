@@ -48,3 +48,11 @@ RUN apt install -y libc-ares-dev libssl-dev gcc g++ make
 RUN source /opt/ros/humble/setup.bash && \
     echo " source /opt/ros/humble/setup.bash" >> ~/.bashrc 
 
+# install ros tools
+RUN apt install -y python3-pip python3-colcon-ros && \
+    DEBIAN_FRONTEND=noninteractive pip3 install rosdepc && \
+    rosdepc init && \
+    rosdepc update
+
+# COPY ../../ws/src/topic_pub.py /workspace
+
